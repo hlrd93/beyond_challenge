@@ -21,9 +21,12 @@ Are side-effects because it modifies the external state by updating the value of
   const previousLink = ref<string | null>(null)
 ```
 
-Yes, these sife-effects are expected becaus of the architecture of the framework.
+Yes, these sife-effects are expected because of the architecture of the framework.
 This is a common side effect when dealing with uni-directional data flow frameworks like Vue.js, React.js.
-They are already avoided making use of async/await statements.
+
+Network requests are already controlled by making use of async/await statements.
+Network requests are unavoidable, it's good practice to minimize and control them.
+For complex state management, make use of tools like Vuex (for Vue.js) that provide patterns to manage state changes more predictably.
 
 # beyond_challenge
 
